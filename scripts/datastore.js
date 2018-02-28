@@ -1,4 +1,4 @@
-(function (window) {
+(function(window) {
   "use strict";
   var App = window.App || {};
 
@@ -6,19 +6,19 @@
     this.data = {};
   }
 
-  Datastore.prototype.add = function (key, val) {
+  Datastore.prototype.add = function(key, val) {
     this.data[key] = val;
   };
 
-  Datastore.prototype.get = function (key) {
+  Datastore.prototype.get = function(key) {
     return this.data[key];
   };
 
-  Datastore.prototype.getAll = function () {
+  Datastore.prototype.getAll = function() {
     return this.data;
   };
 
-  Datastore.prototype.remove = function (key) {
+  Datastore.prototype.remove = function(key) {
     delete this.data[key];
   };
 

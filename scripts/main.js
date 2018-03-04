@@ -1,6 +1,5 @@
 (function(window) {
   "use strict";
-  // var FORM_PAYMENT = "[data-payment-form=form]";
   var FORM_SELECTOR = "[data-coffee-order=form]";
   var CHECKLIST_SELECTOR = "[data-coffee-order=checklist]";
   var App = window.App;
@@ -18,9 +17,6 @@
     myTruck.createOrder.call(myTruck, data);
     checkList.addRow.call(checkList, data);
   });
-
-  // var formhandler1 = new FormHandler(FORM_PAYMENT);
-  // formhandler1.addSubmitHandler(myTruck.createOrder.bind(myTruck));
+  
   console.log(formHandler);
-  // console.log(formhandler1);
 })(window);

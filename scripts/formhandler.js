@@ -40,7 +40,26 @@
         console.log(item.name + " is " + item.value);
       });
       console.log(data);
-      this.blur();
+      var dataArray = Object.values(data);
+      var dialog;
+      var i = 0;
+      while (i < dataArray.length) {
+        if (dataArray[i] == "") {
+          dialog = "<p>Please fill all information</p>";
+          $(dialog).modal();
+          return;
+        }
+        i++;
+      }
+
+      dialog = "<p>Thank you for your payment, " + data["title"] + " " + data["username"] + "</p>";
+      $(dialog).modal({
+        fadeDuration: 1000,
+        fadeDelay: 0.50
+      });
+
+      this.reset();
+      this.elements[0].focus();
     });
   };
 
